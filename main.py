@@ -29,9 +29,17 @@ def choose_char():
     choice = input("Choice: ")
     heros.Hero = choice
 
+def choose_weapon():
+    print("What weapon would you like to use?")
+    for value in heros.Marvel_Superheros[heros.Hero]["Weapons"]:
+      print(f" - {value}")
+    option = input("I choose: ")
+    heros.weapon = option
+
 # Main -----------------------------------------------------------------------
 print("Welcome to my example.\n")
 choose_char()
+choose_weapon()
 print(f"/nYou choose to be {heros.Hero}!")
 print("Finished!\n\n")
 
